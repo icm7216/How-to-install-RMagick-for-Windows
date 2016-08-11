@@ -1,13 +1,13 @@
-# How to install rmagick for Windows
+# How to install rmagick on Windows 10
 
 ### 導入対象
 
 *   ImageMagick-6
 *   rmagick 2.15.4
 
-# ImageMagick のダウンロードとインストール
+# ImageMagick
 
-## ImageMagick のダウンロードの注意点
+#### ImageMagick のダウンロードの注意点
 
 *   使用する Ruby の環境 "x64 or x86(32-bit)" に合わせたバイナリを選択。
 *   dll 付きのバイナリを選択。
@@ -19,12 +19,10 @@ Ruby x64 の場合:
 Ruby x86(32-bit) の場合:
 *   ImageMagick-*-Q*-x86-dll.exe (例： ImageMagick-6.9.5-5-Q16-x86-dll.exe)
 
-### ダウンロード
-
-ImageMagick 6 の最新版
+#### ImageMagick 6 の最新版をダウンロード
 *   [ImageMagick binaries - ImageMagick](http://www.imagemagick.org/download/binaries/)
 
-### 注意!
+##### 注意!
 
 通常の [Windows Binary Release - ImageMagick 7](http://www.imagemagick.org/script/binary-releases.php#windows) では rmagick 2.15.4 のインストールに失敗します。
 
@@ -41,7 +39,7 @@ ImageMagick 6 の最新版
 C:\Program Files (x86)\ImageMagick-6.9.5-Q16
 ```
 
-## ImageMagick インストール時の必須オプション
+#### ImageMagick インストール時の必須オプション
 
 以下の2つを必ず選択すること
 
@@ -49,7 +47,9 @@ C:\Program Files (x86)\ImageMagick-6.9.5-Q16
 *   Install development headers and libraries for C and C++
 
 
-# RMagick のインストール
+# RMagick
+
+## RMagick のインストール
 
 RMagick のインストールは`rake`で完了です。
 
@@ -70,17 +70,17 @@ Done installing documentation for rmagick after 8 seconds
 ```
 
 
-# RMagick の動作確認
+## RMagick の動作確認
 
 ``` console
 >ruby hello_rmagick.rb
 ```
 
-`Hello_RMagick.png`が作成されればOKです。
+上記コマンドを実行後、カレントディレクトリに `Hello_RMagick.png` が出力されればOKです。
 
 ![Hello_RMagick.png](./img/Hello_RMagick.png)
 
-# Rakeの薦め
+## Rakeの薦め
 
 通常の RMagick の Windows 環境へのインストールは ImageMagick のインストールパスと、 include および lib のパスをあわせて指定します。そのため、以下のような長いコマンドラインを作成しなければなりませんでした。このような場合`rakefile`を作成しておけば、以降は`rake`コマンドだけで簡単にインストールできるようになります。
 
@@ -92,6 +92,8 @@ gem install rmagick ^
 --with-opt-lib="[path to ImageMagick]\lib" ^
 --with-opt-include="[path to ImageMagick]\include"
 ```
+
+----
 
 確認環境:
 

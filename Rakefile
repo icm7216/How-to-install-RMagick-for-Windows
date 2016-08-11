@@ -1,7 +1,7 @@
 # encoding:utf-8
 
 #################################
-# install rmagick for Windows
+# install rmagick on Windows
 #################################
 
 # keywords of path to ImageMagick
@@ -24,7 +24,7 @@ task :get_path do
       break
     end
   end
-  
+
   if path == ""
     puts "app PATH not exist"
     exit
