@@ -35,7 +35,7 @@ Ruby x86(32-bit) の場合:
 
 確認環境では、以下のフォルダにインストールされました。
 
-``` console
+```
 C:\Program Files (x86)\ImageMagick-6.9.5-Q16
 ```
 
@@ -51,9 +51,14 @@ C:\Program Files (x86)\ImageMagick-6.9.5-Q16
 
 ## RMagick のインストール
 
-RMagick のインストールは`rake`で完了です。
+```
+>git clone https://github.com/icm7216/How-to-install-RMagick-on-Windows.git
+>cd How-to-install-RMagick-on-Windows
 
-``` console
+```
+
+`rake`を実行してRMagickのインストールを開始
+```
 >rake
 :found install path
  => C:\Program Files (x86)\ImageMagick-6.9.5-Q16
@@ -72,7 +77,7 @@ Done installing documentation for rmagick after 8 seconds
 
 ## RMagick の動作確認
 
-``` console
+```
 >ruby hello_rmagick.rb
 ```
 
@@ -85,7 +90,7 @@ Done installing documentation for rmagick after 8 seconds
 通常の RMagick の Windows 環境へのインストールは ImageMagick のインストールパスと、 include および lib のパスをあわせて指定します。そのため、以下のような長いコマンドラインを作成しなければなりませんでした。このような場合`rakefile`を作成しておけば、以降は`rake`コマンドだけで簡単にインストールできるようになります。
 
 win版 rmagickインストール用のコマンドライン
-``` console
+```
 gem install rmagick ^
 --platform=ruby -- ^
 --with-opt-dir="[path to ImageMagick]" ^
